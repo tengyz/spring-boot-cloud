@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: registry
+    hostname: 192.168.1.199
     prefer-ip-address: true
   client:
     service-url:
@@ -30,7 +30,7 @@ spring:
       skip-pattern: "^org.*HystrixStreamTask$"
 
 authserver:
-    hostname: auth-service
+    hostname: 192.168.1.199
     port: 5000
     contextPath: /uaa
 
