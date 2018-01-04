@@ -12,3 +12,14 @@ eureka:
       service-url:
         defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@192.168.3.194:8761/eureka/
 
+security:
+  user:
+    name: user
+    password: password
+  oauth2:
+    client:
+      clientId: svcb-service
+      clientSecret: ${security.user.password}
+      accessTokenUri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/oauth/token
+      grant-type: client_credentials
+      scope: server
