@@ -12,6 +12,7 @@ public class UserController {
 
     @GetMapping(value = "/current")
     public Principal getUser(Principal principal) {
+    	System.out.println("===========================AuthApplication=====getUser========================");
         return principal;
     }
 }

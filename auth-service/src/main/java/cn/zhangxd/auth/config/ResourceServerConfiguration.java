@@ -11,6 +11,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+    	System.out.println("===========================AuthApplication===== configure(HttpSecurity http) ===14=====================");
         http
                 .requestMatchers().antMatchers("/current")
                 .and()

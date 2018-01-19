@@ -37,12 +37,14 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security)
             throws Exception {
+    	System.out.println("===========================AuthApplication=====configure==configure(AuthorizationServerSecurityConfigurer security==40====================");
         security.passwordEncoder(passwordEncoder);
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints)
             throws Exception {
+    	System.out.println("===========================AuthApplication=====configure==configure(AuthorizationServerEndpoints==44====================");
         endpoints
                 .authenticationManager(auth)
                 .tokenStore(tokenStore())
@@ -52,7 +54,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients)
             throws Exception {
-
+    	System.out.println("===========================AuthApplication=====configure==clients.jdbc(dataSource)======================");
         clients.jdbc(dataSource)
                 .passwordEncoder(passwordEncoder)
                 .withClient("client")
@@ -84,6 +86,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
 
         @Override
         public void init(AuthenticationManagerBuilder auth) throws Exception {
+        	System.out.println("===========================AuthApplication=====init========================");
             auth.jdbcAuthentication().dataSource(dataSource)
                     .withUser("dave").password("secret").roles("USER")
                     .and()
