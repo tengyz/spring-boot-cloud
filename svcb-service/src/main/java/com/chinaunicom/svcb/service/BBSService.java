@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb.service;
+package com.chinaunicom.svcb.service;
 
 import java.util.Date;
 import java.util.List;

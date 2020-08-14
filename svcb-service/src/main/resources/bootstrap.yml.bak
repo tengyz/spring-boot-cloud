@@ -1,14 +1,9 @@
 spring:
   application:
     name: svcb-service
-  cloud:
-    config:
-      uri: http://192.168.1.199:8887
-      fail-fast: true
-      username: user
-      password: ${CONFIG_SERVER_PASSWORD:password}
-      retry:
-        initial-interval: 2000
-        max-interval: 10000
-        multiplier: 2
-        max-attempts: 10
+
+
+
+management:
+  security:
+    enabled : false

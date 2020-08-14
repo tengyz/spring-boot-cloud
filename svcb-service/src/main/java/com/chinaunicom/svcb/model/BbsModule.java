@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb.model;
+package com.chinaunicom.svcb.model;
 import java.math.*;
 import java.util.Date;
 import java.sql.Timestamp;

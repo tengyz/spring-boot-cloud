@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb;
+package com.chinaunicom.svcb;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,7 +48,7 @@ public class ServiceBApplication {
     public BeetlSqlScannerConfigurer getBeetlSqlScannerConfigurer(@Qualifier("sqlManagerFactoryBean") SqlManagerFactoryBean fb) {
     	System.out.println("===========================getBeetlSqlScannerConfigurer=============================");
     	BeetlSqlScannerConfigurer conf = new BeetlSqlScannerConfigurer();
-        conf.setBasePackage("cn.zhangxd.svcb.dao");
+        conf.setBasePackage("com.chinaunicom.svcb.dao");
         conf.setDaoSuffix("Dao");
         conf.setSqlManagerFactoryBeanName("sqlManagerFactoryBean");
 

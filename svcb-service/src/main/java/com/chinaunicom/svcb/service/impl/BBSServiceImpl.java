@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb.service.impl;
+package com.chinaunicom.svcb.service.impl;
 
 import java.io.File;
 import java.text.ParseException;
@@ -18,10 +18,9 @@ import org.springframework.util.CollectionUtils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-
-import cn.zhangxd.svcb.dao.BbsModuleDao;
-import cn.zhangxd.svcb.model.BbsModule;
-import cn.zhangxd.svcb.service.BBSService;
+import com.chinaunicom.svcb.dao.BbsModuleDao;
+import com.chinaunicom.svcb.model.BbsModule;
+import com.chinaunicom.svcb.service.BBSService;
 
 @Service
 public class BBSServiceImpl implements BBSService {
@@ -32,9 +31,6 @@ public class BBSServiceImpl implements BBSService {
 	@Autowired
 	SQLManager sql ;
  
-	
- 
-
 	@Override
 	public String queryDemo(String user) {
 		List<BbsModule> getList=(List<BbsModule>) sql.select("bbsModule.sample", BbsModule.class);

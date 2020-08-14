@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb.controller;
+package com.chinaunicom.svcb.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.zhangxd.svcb.service.BBSService;
+import com.chinaunicom.svcb.service.BBSService;
 
 @RefreshScope
 @RestController

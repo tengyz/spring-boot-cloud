@@ -1,4 +1,4 @@
-package cn.zhangxd.svcb.config;
+package com.chinaunicom.svcb.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
